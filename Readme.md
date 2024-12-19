@@ -99,7 +99,12 @@ Before starting, ensure you have the following installed:
     - npm run start:dev
 
 
-    
+### Run It With Docker
+    - docker-compose up -d    
+
+## Admin Login Credentials
+    - email: admin@admin.com
+    - password: 12345abc
 
 
 
