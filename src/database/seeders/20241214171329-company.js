@@ -5,10 +5,10 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     
       await queryInterface.bulkInsert('companies', [
-        {name: 'Apple.Inc', createAt: new Date(), updateAt: new Date()},
-        {name: 'Google.Inc', createAt: new Date(), updateAt: new Date()},
-        {name: 'Microsoft.Inc', createAt: new Date(), updateAt: new Date(),},
-        {name: 'Amazon.Inc', createAt: new Date(), updateAt: new Date(),},
+        {name: 'Apple.Inc', createdAt: new Date(), updatedAt: new Date()},
+        {name: 'Google.Inc', createdAt: new Date(), updatedAt: new Date()},
+        {name: 'Microsoft.Inc', createdAt: new Date(), updatedAt: new Date(),},
+        {name: 'Amazon.Inc', createdAt: new Date(), updatedAt: new Date(),},
       ], {});
     
   },

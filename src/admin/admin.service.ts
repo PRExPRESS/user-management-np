@@ -20,6 +20,15 @@ export class AdminService {
     return this.adminModel.create({ ...createAdminDto, password: hashedPassword });
   }
 
+  //login validator
+
+  async findByEmail(email: string,): Promise<Admin | null> {
+    const user = await this.adminModel.findOne({ where: { email } });
+    
+    return user;
+  }
+
+
   findAll(): Promise<Admin[]> {
     
     return this.adminModel.findAll();

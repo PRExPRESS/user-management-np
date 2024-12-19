@@ -1,4 +1,5 @@
-import { Table, Column, Model } from 'sequelize-typescript';
+import { Table, Column, Model, HasMany } from 'sequelize-typescript';
+import { User } from 'src/users/entities/user.entity';
 
 @Table({ tableName: 'admins' })
 export class Admin extends Model {
@@ -22,4 +23,7 @@ export class Admin extends Model {
 
     @Column
     updatedAt: Date;
+
+    @HasMany(() => User)
+    users: User[]
 }
